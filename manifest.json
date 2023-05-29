@@ -4,10 +4,11 @@
     "description": "This extension gets all download links in the current page and shows them as text.",
     "version": "1.1",
     "icons": {
-      "16": "public/icon16.png"
+      "16": "public/icon16.png",
+      "64": "public/icon64.png"
     },
     "action": {
-      "default_icon": "public/icon16.png",
+      "default_icon": "public/icon64.png",
       "default_popup": "popup.html"
     },
     "background": {

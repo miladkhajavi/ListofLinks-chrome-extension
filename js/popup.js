@@ -11,7 +11,7 @@ getLinksButton.addEventListener("click", function() {
     // Send a message to the content script in the current tab
     chrome.tabs.sendMessage(tabs[0].id, {action: "getLinks"}, function(response) {
       // Display the links in the textarea
-      linksArea.value = response.links.join("\n");
+      linksArea.value = response?.links?.join("\n") || "There are no links on this page, If you are sure that the link exists on the page, please refresh the page";
     });
   });
 });
@@ -31,7 +31,7 @@ exportLinksButton.addEventListener("click", function() {
   // Create a link element with the URL as href and download attribute
   const link = document.createElement("a");
   link.href = url;
-  link.download = "links.txt";
+  link.download = url.split("/").pop().slice(0,5)+".txt";
   // Append the link element to the document body
   document.body.appendChild(link);
   // Click the link element to trigger the download

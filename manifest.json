@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Get Page Links",
+    "description": "This extension gets all download links in the current page and shows them as text.",
+    "version": "1.0",
+    "icons": {
+      "16": "icon16.png"
+    },
+    "browser_action": {
+      "default_icon": "icon16.png",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "author":"milad khajavi"
+  }
+  

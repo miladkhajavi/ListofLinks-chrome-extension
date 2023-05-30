@@ -9,7 +9,7 @@
 ## Clone project
 
 ```bash
-  git clone https://github.com/miladkhajavi/ListofLinks-chrome-extention
+  git clone https://github.com/miladkhajavi/ListofLinks-chrome-extension
 ```
 
 ## Install
